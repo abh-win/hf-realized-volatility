@@ -1,0 +1,8 @@
+.venv/
+data/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+results/**/*.parquet
+catboost_info/
+results/_cache_*/
