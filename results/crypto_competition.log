@@ -1,0 +1,20 @@
+[01:32:32] computing per-bucket features
+[01:32:32] 18108 samples, 12 stocks, 1509 time_ids, 76 raw features
+[01:32:32] time-order recovery from tick sizes: |Spearman| = 0.513
+[01:32:32] 112 features after cross-sectional / neighbour / lag features
+[01:32:32] Optuna: LightGBM (40 trials)
+[01:36:58]   best CV RMSPE 0.1974 params {'learning_rate': 0.018112350213732753, 'num_leaves': 17, 'min_data_in_leaf': 91, 'feature_fraction': 0.8604215361586857, 'bagging_fraction': 0.5370651291058633, 'lambda_l1': 0.2738673492523309, 'lambda_l2': 0.0014464272201376934, 'n_rounds': 496}
+[01:36:58] Optuna: XGBoost (20 trials)
+[01:39:50]   best CV RMSPE 0.1968
+[01:39:50] naive (RV persistence)         CV 0.2604 ± 0.0277   holdout 0.2099   (0s)
+[01:39:50] HAR-RV (OLS, log)              CV 0.2205 ± 0.0035   holdout 0.2124   (0s)
+[01:39:50] HARQ (WLS)                     CV 0.2077 ± 0.0138   holdout 0.1918   (0s)
+[01:39:52] OLS (all features, log)        CV 0.1984 ± 0.0089   holdout 0.1837   (2s)
+[01:40:17] LightGBM                       CV 0.1965 ± 0.0157   holdout 0.1832   (25s)
+[01:41:03] XGBoost                        CV 0.1960 ± 0.0147   holdout 0.1833   (46s)
+[01:41:17] MLP (stock embedding)          CV 0.1988 ± 0.0144   holdout 0.1830   (14s)
+[01:42:39] 1D-CNN (per-second series)     CV 0.2028 ± 0.0181   holdout 0.1934   (82s)
+[01:42:39] stack weights {'HAR-RV (OLS, log)': 0.071, 'HARQ (WLS)': 0.0, 'OLS (all features, log)': 0.285, 'LightGBM': 0.161, 'XGBoost': 0.198, 'MLP (stock embedding)': 0.171, '1D-CNN (per-second series)': 0.115}
+/home/abhinav/Projects/HF Realized Volatility/scripts/run_pipeline.py:218: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(sv, Xs, max_display=20, show=False)
+[01:42:46] done in 614.8s -> results/crypto_competition
