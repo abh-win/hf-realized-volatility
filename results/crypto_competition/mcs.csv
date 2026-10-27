@@ -1,0 +1,10 @@
+Model name,mcs_pvalue,in_mcs
+Stacked ensemble,1.0,True
+"OLS (all features, log)",0.1165,True
+MLP (stock embedding),0.1165,True
+LightGBM,0.1165,True
+1D-CNN (per-second series),0.0685,False
+XGBoost,0.031,False
+naive (RV persistence),0.0,False
+HARQ (WLS),0.0,False
+"HAR-RV (OLS, log)",0.0,False
