@@ -1,0 +1,132 @@
+{
+  "data": "data/crypto_large",
+  "setting": "competition",
+  "order_recovery_spearman": 0.7048047018295883,
+  "order_source": "true",
+  "n_features": 112,
+  "n_train": 51750,
+  "n_test": 12960,
+  "lgbm_params": {
+    "learning_rate": 0.025611689758213613,
+    "num_leaves": 92,
+    "min_data_in_leaf": 262,
+    "feature_fraction": 0.6505419526242658,
+    "bagging_fraction": 0.7447547191073102,
+    "lambda_l1": 0.13932574592342972,
+    "lambda_l2": 0.8478123317217985,
+    "n_rounds": 203
+  },
+  "xgb_params": {
+    "eta": 0.05251496618325341,
+    "max_depth": 9,
+    "min_child_weight": 181.01667841696852,
+    "subsample": 0.6542525181194839,
+    "colsample_bytree": 0.9261972690582825,
+    "reg_lambda": 0.008005377907055867,
+    "n_rounds": 93
+  },
+  "stack_weights": {
+    "HAR-RV (OLS, log)": 0.0,
+    "HARQ (WLS)": 0.0,
+    "OLS (all features, log)": 0.181,
+    "LightGBM": 0.2784,
+    "XGBoost": 0.2137,
+    "MLP (stock embedding)": 0.2521,
+    "1D-CNN (per-second series)": 0.0748
+  },
+  "models": {
+    "Stacked ensemble": {
+      "holdout_rmspe": 0.19452,
+      "cv_rmspe": 0.22558,
+      "cv_sd": NaN,
+      "vs_HAR_OLS": 0.14174
+    },
+    "LightGBM": {
+      "holdout_rmspe": 0.19526,
+      "cv_rmspe": 0.22802,
+      "cv_sd": 0.02007,
+      "vs_HAR_OLS": 0.13849
+    },
+    "XGBoost": {
+      "holdout_rmspe": 0.19635,
+      "cv_rmspe": 0.22815,
+      "cv_sd": 0.01973,
+      "vs_HAR_OLS": 0.13368
+    },
+    "MLP (stock embedding)": {
+      "holdout_rmspe": 0.19846,
+      "cv_rmspe": 0.23063,
+      "cv_sd": 0.02219,
+      "vs_HAR_OLS": 0.12437
+    },
+    "1D-CNN (per-second series)": {
+      "holdout_rmspe": 0.19924,
+      "cv_rmspe": 0.23753,
+      "cv_sd": 0.02627,
+      "vs_HAR_OLS": 0.12091
+    },
+    "OLS (all features, log)": {
+      "holdout_rmspe": 0.20976,
+      "cv_rmspe": 0.23951,
+      "cv_sd": 0.02687,
+      "vs_HAR_OLS": 0.07449
+    },
+    "HARQ (WLS)": {
+      "holdout_rmspe": 0.21135,
+      "cv_rmspe": 0.2489,
+      "cv_sd": 0.02736,
+      "vs_HAR_OLS": 0.06748
+    },
+    "HAR-RV (OLS, log)": {
+      "holdout_rmspe": 0.22664,
+      "cv_rmspe": 0.25882,
+      "cv_sd": 0.02087,
+      "vs_HAR_OLS": 0.0
+    },
+    "naive (RV persistence)": {
+      "holdout_rmspe": 0.25308,
+      "cv_rmspe": 0.30957,
+      "cv_sd": 0.0345,
+      "vs_HAR_OLS": -0.11664
+    }
+  },
+  "mcs": {
+    "Stacked ensemble": {
+      "mcs_pvalue": 1.0,
+      "in_mcs": true
+    },
+    "LightGBM": {
+      "mcs_pvalue": 0.341,
+      "in_mcs": true
+    },
+    "XGBoost": {
+      "mcs_pvalue": 0.055,
+      "in_mcs": false
+    },
+    "1D-CNN (per-second series)": {
+      "mcs_pvalue": 0.004,
+      "in_mcs": false
+    },
+    "HAR-RV (OLS, log)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "MLP (stock embedding)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "OLS (all features, log)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "naive (RV persistence)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "HARQ (WLS)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    }
+  },
+  "runtime_s": 912.6
+}
