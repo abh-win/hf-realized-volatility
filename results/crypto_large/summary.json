@@ -1,0 +1,214 @@
+{
+  "data": "data/crypto_large",
+  "setting": "strict",
+  "order_recovery_spearman": 0.7048047018295883,
+  "order_source": "true",
+  "n_features": 112,
+  "n_train": 51750,
+  "n_test": 12960,
+  "lgbm_params": {
+    "learning_rate": 0.021783944117496144,
+    "num_leaves": 25,
+    "min_data_in_leaf": 171,
+    "feature_fraction": 0.9388204743041685,
+    "bagging_fraction": 0.6152794595453018,
+    "lambda_l1": 6.835047052722769,
+    "lambda_l2": 0.09395038113175115,
+    "n_rounds": 456
+  },
+  "xgb_params": {
+    "eta": 0.09465627002256172,
+    "max_depth": 9,
+    "min_child_weight": 281.19023033261965,
+    "subsample": 0.6821366019409825,
+    "colsample_bytree": 0.4645138172304555,
+    "reg_lambda": 1.1971007910125544,
+    "n_rounds": 64
+  },
+  "stack_weights": {
+    "HAR-RV (OLS, log)": 0.0456,
+    "HARQ (WLS)": 0.0,
+    "OLS (all features, log)": 0.0795,
+    "LightGBM": 0.2627,
+    "XGBoost": 0.2443,
+    "MLP (stock embedding)": 0.2629,
+    "1D-CNN (per-second series)": 0.105
+  },
+  "models": {
+    "Stacked ensemble": {
+      "holdout_rmspe": 0.19746,
+      "cv_rmspe": 0.22985,
+      "cv_sd": NaN,
+      "vs_HAR_OLS": 0.12877
+    },
+    "LightGBM": {
+      "holdout_rmspe": 0.19869,
+      "cv_rmspe": 0.23133,
+      "cv_sd": 0.01959,
+      "vs_HAR_OLS": 0.12333
+    },
+    "XGBoost": {
+      "holdout_rmspe": 0.19933,
+      "cv_rmspe": 0.23176,
+      "cv_sd": 0.01944,
+      "vs_HAR_OLS": 0.12049
+    },
+    "1D-CNN (per-second series)": {
+      "holdout_rmspe": 0.2022,
+      "cv_rmspe": 0.23999,
+      "cv_sd": 0.02222,
+      "vs_HAR_OLS": 0.10784
+    },
+    "MLP (stock embedding)": {
+      "holdout_rmspe": 0.20226,
+      "cv_rmspe": 0.23473,
+      "cv_sd": 0.0229,
+      "vs_HAR_OLS": 0.1076
+    },
+    "HARQ (WLS)": {
+      "holdout_rmspe": 0.21135,
+      "cv_rmspe": 0.2489,
+      "cv_sd": 0.02736,
+      "vs_HAR_OLS": 0.06748
+    },
+    "OLS (all features, log)": {
+      "holdout_rmspe": 0.21257,
+      "cv_rmspe": 0.24429,
+      "cv_sd": 0.02685,
+      "vs_HAR_OLS": 0.06209
+    },
+    "HAR-RV (OLS, log)": {
+      "holdout_rmspe": 0.22664,
+      "cv_rmspe": 0.25882,
+      "cv_sd": 0.02087,
+      "vs_HAR_OLS": 0.0
+    },
+    "naive (RV persistence)": {
+      "holdout_rmspe": 0.25308,
+      "cv_rmspe": 0.30957,
+      "cv_sd": 0.0345,
+      "vs_HAR_OLS": -0.11664
+    }
+  },
+  "mcs": {
+    "Stacked ensemble": {
+      "mcs_pvalue": 1.0,
+      "in_mcs": true
+    },
+    "LightGBM": {
+      "mcs_pvalue": 0.0145,
+      "in_mcs": false
+    },
+    "XGBoost": {
+      "mcs_pvalue": 0.002,
+      "in_mcs": false
+    },
+    "HAR-RV (OLS, log)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "naive (RV persistence)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "MLP (stock embedding)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "OLS (all features, log)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "HARQ (WLS)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    },
+    "1D-CNN (per-second series)": {
+      "mcs_pvalue": 0.0,
+      "in_mcs": false
+    }
+  },
+  "ablations": [
+    {
+      "group_removed": "realized (RV/BV/jumps/semivariance/RQ)",
+      "n_features": 26,
+      "cv_rmspe": 0.23704,
+      "delta_cv": 0.00571,
+      "holdout_rmspe": 0.20303,
+      "delta_holdout": 0.00434
+    },
+    {
+      "group_removed": "multi-scale windows (last 500/300/200/100 s)",
+      "n_features": 48,
+      "cv_rmspe": 0.23299,
+      "delta_cv": 0.00166,
+      "holdout_rmspe": 0.19982,
+      "delta_holdout": 0.00113
+    },
+    {
+      "group_removed": "lags across buckets",
+      "n_features": 3,
+      "cv_rmspe": 0.23263,
+      "delta_cv": 0.00129,
+      "holdout_rmspe": 0.20029,
+      "delta_holdout": 0.0016
+    },
+    {
+      "group_removed": "microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)",
+      "n_features": 29,
+      "cv_rmspe": 0.23243,
+      "delta_cv": 0.00109,
+      "holdout_rmspe": 0.19978,
+      "delta_holdout": 0.00109
+    },
+    {
+      "group_removed": "trades",
+      "n_features": 17,
+      "cv_rmspe": 0.23204,
+      "delta_cv": 0.00071,
+      "holdout_rmspe": 0.19935,
+      "delta_holdout": 0.00066
+    },
+    {
+      "group_removed": "cross-sectional (market aggregates, clusters)",
+      "n_features": 24,
+      "cv_rmspe": 0.23194,
+      "delta_cv": 0.00061,
+      "holdout_rmspe": 0.19789,
+      "delta_holdout": -0.0008
+    },
+    {
+      "group_removed": "stock id",
+      "n_features": 1,
+      "cv_rmspe": 0.23172,
+      "delta_cv": 0.00038,
+      "holdout_rmspe": 0.19924,
+      "delta_holdout": 0.00054
+    },
+    {
+      "group_removed": "nearest-neighbour time_ids",
+      "n_features": 8,
+      "cv_rmspe": 0.23155,
+      "delta_cv": 0.00022,
+      "holdout_rmspe": 0.19814,
+      "delta_holdout": -0.00055
+    },
+    {
+      "group_removed": "price level / tick",
+      "n_features": 2,
+      "cv_rmspe": 0.23127,
+      "delta_cv": -7e-05,
+      "holdout_rmspe": 0.19868,
+      "delta_holdout": -1e-05
+    },
+    {
+      "group_removed": "noise-robust (TSRV, realized kernel)",
+      "n_features": 2,
+      "cv_rmspe": 0.23123,
+      "delta_cv": -0.0001,
+      "holdout_rmspe": 0.19842,
+      "delta_holdout": -0.00027
+    }
+  ],
+  "runtime_s": 1301.9
+}

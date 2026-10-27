@@ -1,0 +1,113 @@
+feature,mean_abs_shap,group
+rq1,0.05240253412510749,realized (RV/BV/jumps/semivariance/RQ)
+stock_id,0.017913070425832147,stock id
+lag1_rv1_w600,0.014763676743360607,lags across buckets
+lag6_rv1_w600,0.011816560888775368,lags across buckets
+rv1_w100_tstd,0.010508096702298214,"cross-sectional (market aggregates, clusters)"
+lag72_rv1_w600,0.00931971153313197,lags across buckets
+rv1_w600_tratio,0.009099785917029332,"cross-sectional (market aggregates, clusters)"
+trade_secs_w100,0.00899459087164486,trades
+trade_orders_w100,0.008600704977788583,trades
+rv1_w100_tmean,0.008487869881056292,"cross-sectional (market aggregates, clusters)"
+ret_sum,0.00756825217858436,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+rsn1_w600,0.006667674230236906,realized (RV/BV/jumps/semivariance/RQ)
+rv1_w600,0.0046971343834654265,realized (RV/BV/jumps/semivariance/RQ)
+tsrv1_tmean,0.004548939412924524,"cross-sectional (market aggregates, clusters)"
+tsrv1_tstd,0.004400879515227573,"cross-sectional (market aggregates, clusters)"
+rv1_w600_tstd,0.004384237438799777,"cross-sectional (market aggregates, clusters)"
+rv1_w100,0.004250848964956133,realized (RV/BV/jumps/semivariance/RQ)
+ofi_w200,0.004230863325321246,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+ofi_abs_w600_tstd,0.003925165174526521,"cross-sectional (market aggregates, clusters)"
+amihud,0.003598350465665246,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+spread_mean_w600_tstd,0.003557126784441499,"cross-sectional (market aggregates, clusters)"
+nn20_mkt_tsrv1,0.0035282319790725125,nearest-neighbour time_ids
+bv1_w600,0.0035066503579189844,realized (RV/BV/jumps/semivariance/RQ)
+nn5_rv1_w600,0.0033421956021017518,nearest-neighbour time_ids
+rsp1_w600,0.0032210952222745688,realized (RV/BV/jumps/semivariance/RQ)
+bv1_w100,0.003145159101905004,realized (RV/BV/jumps/semivariance/RQ)
+nn20_rv1_w600,0.0030727538949198337,nearest-neighbour time_ids
+rsn1_w100,0.002713475156358588,realized (RV/BV/jumps/semivariance/RQ)
+nn5_mkt_tsrv1,0.0026779054497785026,nearest-neighbour time_ids
+spread_trend,0.0025179885839244406,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+nn20_tsrv1,0.002426854831475609,nearest-neighbour time_ids
+ofi_abs_w600_tmean,0.002420202866152175,"cross-sectional (market aggregates, clusters)"
+nn5_tsrv1,0.0023972778214183055,nearest-neighbour time_ids
+trade_orders_w600,0.002300222362770294,trades
+trade_size_w600_tratio,0.0022432282063337464,"cross-sectional (market aggregates, clusters)"
+nn20_mkt_rv1_w600,0.002231915150375418,nearest-neighbour time_ids
+ofi_w100,0.0022110494321293077,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+ofi_abs_w600,0.0021009856480834247,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+rv1_w300_tstd,0.0017857361826304225,"cross-sectional (market aggregates, clusters)"
+ofi_abs_w600_tratio,0.0017653369381608896,"cross-sectional (market aggregates, clusters)"
+jump1_w600,0.0016884901806746865,realized (RV/BV/jumps/semivariance/RQ)
+trade_size_w600_tstd,0.0016477534305776643,"cross-sectional (market aggregates, clusters)"
+rsp1_w500,0.0015933609829671476,realized (RV/BV/jumps/semivariance/RQ)
+rv1_w600_tmean,0.0015300799374222207,"cross-sectional (market aggregates, clusters)"
+spread_mean_w600_tmean,0.0015213516772984068,"cross-sectional (market aggregates, clusters)"
+rv1_w300_tmean,0.0013815410270223128,"cross-sectional (market aggregates, clusters)"
+ofi_abs_w200,0.0013683446282404847,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+trade_secs_w200,0.001298239638766473,trades
+trade_size_w600,0.0012533263005291486,trades
+nn5_mkt_rv1_w600,0.001215125918592394,nearest-neighbour time_ids
+trade_rv,0.0011469903253324666,trades
+rk1,0.0010468871095940442,"noise-robust (TSRV, realized kernel)"
+rsp1_w100,0.0009584186989767513,realized (RV/BV/jumps/semivariance/RQ)
+rsn1_w200,0.0009175798901376228,realized (RV/BV/jumps/semivariance/RQ)
+ofi_w300,0.0008750599674676595,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+depth_trend,0.0007549625716821016,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+spread_std,0.000732100602365849,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+range,0.0006838988848035081,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+trade_size_w100,0.0006723403261034139,trades
+tsrv1_tratio,0.0006579285161836479,"cross-sectional (market aggregates, clusters)"
+jump1_w500,0.0006047392900987972,realized (RV/BV/jumps/semivariance/RQ)
+bv1_w200,0.00059865524700643,realized (RV/BV/jumps/semivariance/RQ)
+kyle,0.000571011810963986,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+clu_tsrv1_mean,0.0005688287813180845,"cross-sectional (market aggregates, clusters)"
+rsp1_w300,0.0005625304410579363,realized (RV/BV/jumps/semivariance/RQ)
+rsn1_w300,0.0004978521632509522,realized (RV/BV/jumps/semivariance/RQ)
+ofi_abs_w300,0.0004879671927099151,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+trade_orders_w200,0.00048139329005129287,trades
+trade_size_w600_tmean,0.00047719600682359794,"cross-sectional (market aggregates, clusters)"
+rsn1_w500,0.0004440548893687985,realized (RV/BV/jumps/semivariance/RQ)
+tsrv1,0.000443936545473776,"noise-robust (TSRV, realized kernel)"
+trade_signed_share,0.0004394233188440611,trades
+rv1_w200,0.0004353632234349339,realized (RV/BV/jumps/semivariance/RQ)
+ofi_abs_w100,0.0004337182594035826,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+rv1_w300_tratio,0.00039856476432803035,"cross-sectional (market aggregates, clusters)"
+n_upd,0.000379234894388357,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+imb1_w200,0.00036059763680970815,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+jump1_w200,0.00035799059649308917,realized (RV/BV/jumps/semivariance/RQ)
+ofi_abs_w500,0.0003535904630484147,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+rv1_w300,0.0003444577727283411,realized (RV/BV/jumps/semivariance/RQ)
+clu_rv1_w300_mean,0.000339371254835253,"cross-sectional (market aggregates, clusters)"
+bv1_w500,0.00033442539867630904,realized (RV/BV/jumps/semivariance/RQ)
+imb1_w100,0.0003240875202720786,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+bv1_w300,0.0003235372768980558,realized (RV/BV/jumps/semivariance/RQ)
+trade_secs_w300,0.0003219267176827729,trades
+rv1_w100_tratio,0.0003147188697243427,"cross-sectional (market aggregates, clusters)"
+trade_orders_w500,0.0003064658393429167,trades
+trade_size_w500,0.0003032355987790896,trades
+spread_mean_w200,0.00029973501197577966,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+rv1_w500,0.0002816659544538915,realized (RV/BV/jumps/semivariance/RQ)
+depth_mean,0.00026832988745784385,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+ofi_w500,0.0002603018122071535,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+trade_secs_w600,0.00024540467785780104,trades
+trade_orders_w300,0.00022842799925024368,trades
+jump1_w300,0.00022325637454861632,realized (RV/BV/jumps/semivariance/RQ)
+spread_mean_w500,0.0002224763678569235,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+ofi_w600,0.00021259561085279399,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+price_level,0.00020820186562481028,price level / tick
+rsp1_w200,0.00019329412930373202,realized (RV/BV/jumps/semivariance/RQ)
+spread_mean_w300,0.00018434690078252865,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+clu_rv1_w600_mean,0.00018220335296218,"cross-sectional (market aggregates, clusters)"
+trade_size_w200,0.00017967401506279764,trades
+imb1_w500,0.00017470159190998772,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+spread_mean_w600,0.00015810569085334623,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+imb1_w600,0.00015298750263722892,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+spread_mean_w600_tratio,0.00014948645546579935,"cross-sectional (market aggregates, clusters)"
+imb1_w300,0.00014271956127269778,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+jump1_w100,0.0001409650931444472,realized (RV/BV/jumps/semivariance/RQ)
+trade_secs_w500,0.00014039195899010937,trades
+tick_norm,0.00010624277238842392,price level / tick
+spread_mean_w100,8.491334554606436e-05,"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)"
+trade_size_w300,3.3283624022300995e-05,trades

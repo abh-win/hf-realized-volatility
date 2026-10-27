@@ -1,0 +1,10 @@
+group,mean_abs_shap
+realized (RV/BV/jumps/semivariance/RQ),0.09110520914544364
+"cross-sectional (market aggregates, clusters)",0.0662956290935425
+lags across buckets,0.035899949165267946
+"microstructure (spread, imbalance, OFI, depth, Kyle, Amihud)",0.031713277349216015
+trades,0.026946041842818624
+nearest-neighbour time_ids,0.020892260647734327
+stock id,0.017913070425832147
+"noise-robust (TSRV, realized kernel)",0.0014908236550678201
+price level / tick,0.0003144446380132342
