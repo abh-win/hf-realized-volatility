@@ -1,0 +1,31 @@
+[01:53:53] computing per-bucket features
+[01:53:53] 36000 samples, 30 stocks, 1200 time_ids, 89 raw features
+[01:53:53] time-order recovery from tick sizes: |Spearman| = 1.000
+[01:53:53] 125 features after cross-sectional / neighbour / lag features
+[01:53:53] Optuna: LightGBM (40 trials)
+[01:57:04]   best CV RMSPE 0.2256 params {'learning_rate': 0.020139574769567063, 'num_leaves': 19, 'min_data_in_leaf': 136, 'feature_fraction': 0.34759052808609736, 'bagging_fraction': 0.5283829977078536, 'lambda_l1': 0.0015115116078653443, 'lambda_l2': 0.11993843098762257, 'n_rounds': 604}
+[01:57:04] Optuna: XGBoost (20 trials)
+[02:01:08]   best CV RMSPE 0.2253
+[02:01:08] naive (RV persistence)         CV 0.2996 ± 0.0171   holdout 0.2926   (0s)
+[02:01:08] HAR-RV (OLS, log)              CV 0.2295 ± 0.0108   holdout 0.2303   (0s)
+[02:01:08] HARQ (WLS)                     CV 0.2321 ± 0.0106   holdout 0.2352   (0s)
+[02:01:14] OLS (all features, log)        CV 0.2220 ± 0.0105   holdout 0.2219   (5s)
+[02:01:43] LightGBM                       CV 0.2249 ± 0.0106   holdout 0.2243   (29s)
+[02:03:02] XGBoost                        CV 0.2244 ± 0.0104   holdout 0.2241   (79s)
+[02:03:27] MLP (stock embedding)          CV 0.2240 ± 0.0104   holdout 0.2265   (25s)
+[02:05:28] 1D-CNN (per-second series)     CV 0.2289 ± 0.0109   holdout 0.2278   (120s)
+[02:05:28] stack weights {'HAR-RV (OLS, log)': 0.0, 'HARQ (WLS)': 0.0, 'OLS (all features, log)': 0.489, 'LightGBM': 0.0, 'XGBoost': 0.077, 'MLP (stock embedding)': 0.216, '1D-CNN (per-second series)': 0.218}
+/home/abhinav/Projects/HF Realized Volatility/scripts/run_pipeline.py:218: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(sv, Xs, max_display=20, show=False)
+[02:06:04] ablation -cross-sectional (market aggregates, clusters): CV 0.2271 (Δ +0.0023)  holdout 0.2273
+[02:06:33] ablation -lags across buckets: CV 0.2254 (Δ +0.0005)  holdout 0.2247
+[02:07:01] ablation -level-2 (WAP2, L2 imbalance/spread/depth): CV 0.2247 (Δ -0.0002)  holdout 0.2240
+[02:07:29] ablation -microstructure (spread, imbalance, OFI, depth, Kyle, Amihud): CV 0.2253 (Δ +0.0004)  holdout 0.2242
+[02:07:57] ablation -nearest-neighbour time_ids: CV 0.2254 (Δ +0.0005)  holdout 0.2245
+[02:08:26] ablation -noise-robust (TSRV, realized kernel): CV 0.2246 (Δ -0.0002)  holdout 0.2241
+[02:08:56] ablation -price level / tick: CV 0.2247 (Δ -0.0001)  holdout 0.2243
+[02:09:22] ablation -realized (RV/BV/jumps/semivariance/RQ): CV 0.2268 (Δ +0.0019)  holdout 0.2266
+[02:09:52] ablation -stock id: CV 0.2245 (Δ -0.0004)  holdout 0.2244
+[02:10:20] ablation -trades: CV 0.2246 (Δ -0.0002)  holdout 0.2244
+[02:10:44] ablation -multi-scale windows (last 500/300/200/100 s): CV 0.2270 (Δ +0.0022)  holdout 0.2262
+[02:10:44] done in 1011.3s -> results/synthetic
