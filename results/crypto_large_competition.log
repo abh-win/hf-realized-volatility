@@ -1,0 +1,50 @@
+[03:21:18] computing per-bucket features
+[03:21:18] 64728 samples, 18 stocks, 3596 time_ids, 76 raw features
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+/home/abhinav/Projects/HF Realized Volatility/.venv/lib/python3.14/site-packages/scipy/sparse/_index.py:174: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil and dok are more efficient.
+  self._set_intXint(row, col, x.flat[0])
+[03:21:20] time-order recovery from tick sizes: |Spearman| = 0.705
+[03:21:21] 112 features after cross-sectional / neighbour / lag features
+[03:21:21] Optuna: LightGBM (40 trials)
+[03:27:09]   best CV RMSPE 0.2292 params {'learning_rate': 0.025611689758213613, 'num_leaves': 92, 'min_data_in_leaf': 262, 'feature_fraction': 0.6505419526242658, 'bagging_fraction': 0.7447547191073102, 'lambda_l1': 0.13932574592342972, 'lambda_l2': 0.8478123317217985, 'n_rounds': 203}
+[03:27:09] Optuna: XGBoost (20 trials)
+[03:30:58]   best CV RMSPE 0.2294
+[03:30:58] naive (RV persistence)         CV 0.3096 ± 0.0345   holdout 0.2531   (0s)
+[03:30:58] HAR-RV (OLS, log)              CV 0.2588 ± 0.0209   holdout 0.2266   (0s)
+[03:30:58] HARQ (WLS)                     CV 0.2489 ± 0.0274   holdout 0.2113   (0s)
+[03:31:03] OLS (all features, log)        CV 0.2395 ± 0.0269   holdout 0.2098   (5s)
+[03:31:45] LightGBM                       CV 0.2280 ± 0.0201   holdout 0.1953   (42s)
+[03:32:18] XGBoost                        CV 0.2281 ± 0.0197   holdout 0.1963   (33s)
+[03:33:16] MLP (stock embedding)          CV 0.2306 ± 0.0222   holdout 0.1985   (59s)
+[03:36:14] 1D-CNN (per-second series)     CV 0.2375 ± 0.0263   holdout 0.1992   (178s)
+[03:36:14] stack weights {'HAR-RV (OLS, log)': 0.0, 'HARQ (WLS)': 0.0, 'OLS (all features, log)': 0.181, 'LightGBM': 0.278, 'XGBoost': 0.214, 'MLP (stock embedding)': 0.252, '1D-CNN (per-second series)': 0.075}
+/home/abhinav/Projects/HF Realized Volatility/scripts/run_pipeline.py:218: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(sv, Xs, max_display=20, show=False)
+[03:36:31] done in 912.6s -> results/crypto_large_competition
